@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>italy</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Hamburger menu styles */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .bar {
+            display: block;
+            height: 4px;
+            width: 30px;
+            background-color: #333;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        /* Responsive styles - show/hide the navigation based on the button state */
+        @media only screen and (max-width: 768px) {
+            .main-menu ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px; /* Adjust as needed */
+                left: 0;
+                width: 100%;
+                background-color: #f5f5dc;
+                z-index: 1;
+            }
+
+            .main-menu ul.show {
+                display: flex;
+            }
+
+            .main-menu li {
+                margin: 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .main-menu a {
+                margin: 0;
+                padding: 15px 20px;
+                line-height: 1;
+            }
+
+            .main-menu a.active ~ .animation {
+                display: none;
+            }
+            .dropdown {
+                margin-left: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-menu">
+        <button class="menu-toggle" aria-label="Toggle Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Cruises</a></li>
+            <li><a href="#">Rediscover Singapore</a></li>
+            <li class="dropdown-parent">
+                <a href="#"class="active">Package Tours></a>
+                <ul class="dropdown">
+                    <li><a href="beach.html" class="active" >Beach Paradise</a></li>
+                    <li><a href="italy.html">Rome City</a></li>
+                    <li><a href="#">Desert</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    
+        <div class="animation start-home"></div>
+        </ul>
+        <div class="logo">
+            <?xml version="1.0" encoding="utf-8"?>
+        <!-- Generator: Adobe Illustrator 28.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 181.61 169.22" style="enable-background:new 0 0 181.61 169.22;" xml:space="preserve">
+        <style type="text/css">
+            .st0{fill:#52C7E3;stroke:#000000;stroke-miterlimit:10;}
+            .st1{fill:#83B241;stroke:#000000;stroke-miterlimit:10;}
+            .st2{font-family:'MyriadPro-Regular';}
+            .st3{font-size:35.398px;}
+        </style>
+        <path class="st0" d="M156.2,85.35c0,37-30,67-67,67c-30.97,0-57.03-21.01-64.71-49.55C23,97.24,22.2,91.39,22.2,85.35
+            c0-18.21,7.27-34.73,19.06-46.81C53.43,26.08,70.41,18.35,89.2,18.35C126.2,18.35,156.2,48.35,156.2,85.35z"/>
+        <path class="st1" d="M62.83,101.81c0,0-28.98-12.69-38.34,0.99c0,0,7.15,40.93,58.51,49.55c0,0,7.8-32.66-7.8-35.41
+            c0,0-8.25,5.04-12.84,1.83c0,0-5.04-3.67-5.04-8.25S62.83,101.81,62.83,101.81z"/>
+        <path class="st1" d="M118.48,74.66c0,0,25.74,18.39,37.72,6.93c0,0,1.44-41.53-47.04-60.55c0,0-14.36,30.35,0.33,36.25
+            c0,0,9.12-3.23,12.94,0.85c0,0,4.18,4.63,3.23,9.12S118.48,74.66,118.48,74.66z"/>
+        <text transform="matrix(1.0633 0 0 1 60.5339 96.4501)" class="st2 st3">WX</text>
+        </svg>
+        </div>
+        </nav>
+
+        <div class="video-container">
+            <video width="100%" muted loop autoplay>
+                <source src="videos/travel.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <article class="row">
+            <div class="column-article" style="background-color:lightseagreen;">
+              <h2>Places to visit </h2>
+              <p>Explore the beauty of the Singapore Sentosa Beach!</p>
+              <div><img src="images/BSingapore.jpg" class="ocean" width="330" height="300"></div>
+            </div>
+            <div class="column-article" style="background-color:lightsalmon;">
+              <h2>Reccomended eateries </h2>
+              <p>Can't miss out the food!</p>
+              <div><img src="images/BFood.jpg" class="food" width="330" height="300"></div>
+            </div>
+            <div class="column-article" style="background-color:lightskyblue;">
+              <h2>Speciaties</h2>
+              <p>Check out street shops along the way while taking a walk!</p>
+              <div><img src="images/BStreet.jpg" class="temple" width="330" height="300"></div>  
+            </div>
+        </article>
+        <script>
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mainMenu = document.querySelector('.main-menu ul');
+    
+            menuToggle.addEventListener('click', function () {
+                mainMenu.classList.toggle('show');
+            });
+        </script>
+
+
+    
+</body>
+</html>

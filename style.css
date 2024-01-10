@@ -1,0 +1,315 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body, h1, h2, p, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #F3E7D2;
+    color: #fff;
+}
+
+/* Style for the navigation menu */
+.main-menu {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+
+.main-menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-menu a {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #0056b3;
+    text-decoration: none;
+    line-height: 50px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+    margin: 0 10px; /* Add margin between menu items */
+}
+
+/* Add a class to the active link to style the grey box */
+.main-menu a.active {
+    color: #FC0FC0;
+    position: relative;
+}
+
+/* Styles for the grey box */
+.main-menu a.active ~ .animation {
+    position: absolute;
+    top: 0;
+    background: #d5d1d1;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* Adjust the left position and width based on the active link */
+.main-menu a:nth-child(1).active ~ .animation {
+    left: 0;
+    width: 110px;
+}
+
+.main-menu a:nth-child(2).active ~ .animation {
+    left: 110px;
+    width: 110px;
+}
+
+.main-menu a:nth-child(3).active ~ .animation {
+    left: 220px;
+    width: 100px;
+}
+
+.main-menu a:nth-child(4).active ~ .animation {
+    left: 320px;
+    width: 160px;
+}
+
+.main-menu a:nth-child(5).active ~ .animation {
+    left: 480px;
+    width: 120px;
+}
+
+
+.main-menu a:hover {
+    color: #eb309a;
+    transform: scale(1.1);
+}
+
+.main-menu li {
+    list-style: none;
+    display: flex;
+}
+
+.main-menu li {
+    margin: 0 10px;
+}
+
+.dropdown-parent {
+    position: relative;
+}
+
+.dropdown-parent .dropdown {
+    display: none;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    z-index: 1;
+    border-radius: 0 0 10px 10px;
+    width: 200px;
+}
+
+.subMenu{
+    margin-left: 100px;
+}
+
+.dropdown-parent:hover .dropdown {
+    display: block;
+}
+
+.dropdown a {
+    font-size: 14px;
+    color: #0056b3;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.dropdown a:hover {
+    background-color: #eb309a;
+    color: #000000;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.logo:hover {
+    transform: scale(1.4);
+}
+
+.logo svg {
+    width: 50px;
+    height: auto;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    width: 100%;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.card h1 {
+    color: #333;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.card p {
+    color: #666;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.card button {
+    box-sizing: border-box;
+    float: left;
+    border: none;
+    outline: 0;
+    padding: 12px 20px;
+    color: #fff;
+    background-color: #007BFF;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.card button:hover {
+    background-color: #0056b3;
+    opacity: 0.9;
+}
+
+.card img {
+    max-width: 100%;
+    transition: 0.4s;
+
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.footer table {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.footer table tr {
+    text-align: left;
+}
+
+.footer table td {
+    padding: 5px 10px;
+}
+
+.footer table a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.footer table a:hover {
+    text-decoration: underline;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+
+.column-article {
+    box-sizing: border-box;
+    width: 30%;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.column-article:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.column-article:nth-child(odd) {
+    background-color: lightseagreen;
+}
+
+.column-article:nth-child(even) {
+    background-color: lightsalmon;
+}
+
+.column-article:last-child {
+    background-color: lightskyblue;
+}
+
+.column-article h2 {
+    color: #fff;
+}
+
+.column-article p {
+    color: #fff;
+    margin-top: 10px;
+}
+
+.column-article img {
+    max-width: 100%;
+    border-radius: 5px;
+}
